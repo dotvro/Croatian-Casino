@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Croatian Casino - Blackjack</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🎲 Croatian Casino</div>
+    <div class="chips">Chips: $<span id="chips">100</span></div>
+  </header>
+
+  <main>
+    <div class="betting-area">
+      <h2>Place Your Bet</h2>
+      <div class="bet-buttons">
+        <button onclick="placeBet(5)">Bet $5</button>
+        <button onclick="placeBet(10)">Bet $10</button>
+        <button onclick="placeBet(25)">Bet $25</button>
+        <button onclick="placeBet(50)">Bet $50</button>
+        <button onclick="placeBet(100)">Bet $100</button>
+        <button onclick="placeBet(250)">Bet $250</button>
+      </div>
+      <div id="current-bet">Current Bet: $0</div>
+    </div>
+
+    <section class="game-area">
+      <div>
+        <h2>Dealer</h2>
+        <div id="dealer-cards" class="card-row"></div>
+        <div id="dealer-score" class="score"></div>
+      </div>
+      <div>
+        <h2>Player</h2>
+        <div id="player-cards" class="card-row"></div>
+        <div id="player-score" class="score"></div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="start">Start Game</button>
+      <button id="hit" disabled>Hit</button>
+      <button id="stand" disabled>Stand</button>
+    </div>
+
+    <div id="result" class="result"></div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
